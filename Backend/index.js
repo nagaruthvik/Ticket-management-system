@@ -12,7 +12,7 @@ const app = express();
 
 dotenv.config();
 app.use(bodyParser.json());
-app.use(cors({ origin: "hhttps://ticket-management-system-amber.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://ticket-management-system-amber.vercel.app", credentials: true }));
 app.use("/user", userRouter);
 app.use("/chat", chatRouter);
 app.use("/chatbot",chatbotRouter);
