@@ -59,7 +59,8 @@ export default function LandingPage() {
         setChatOption(false);
         localStorage.setItem("email", email);
       } else {
-        console.error("Error from server:", data.message);
+        
+        toast.error(data.message, { position: "top-center" });
       }
     } catch (error) {
       console.error("Network error:", error);
