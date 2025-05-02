@@ -60,29 +60,27 @@ export default function UserSettings() {
   useEffect(() => {
     GetUserDet();
   }, []);
-
+  
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
-
+  
     if (formData.password !== formData.cPassword) {
       toast.error("Passwords do not match", { position: "top-center" });
       return;
     }
-
-    if (formData.password !== "") {
-      var data = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        password: formData.password,
-      };
-    }
-    data = {
+    let data = {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
     };
+  
+    if (formData.password !== "") {
+      data.password = formData.password;
+    }
+  
 
+  
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
@@ -95,13 +93,13 @@ export default function UserSettings() {
         credentials: "include",
         body: JSON.stringify(data),
       });
-
+  
       const result = await response.json();
-
+  
       if (!response.ok) {
         throw new Error(result.message || "Failed to update user");
       }
-
+  
       toast.success(result.message, { position: "top-center" });
       navigate("/");
     } catch (error) {
@@ -110,7 +108,7 @@ export default function UserSettings() {
       setLoading(false);
     }
   };
-
+  
   return (
     <>
       {isLoading && (
