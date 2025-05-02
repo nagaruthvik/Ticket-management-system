@@ -60,7 +60,7 @@ export default function LandingPage() {
         localStorage.setItem("email", email);
       } else {
         
-        toast.error(data.message, { position: "top-center" });
+        toast.error("please create a super admin account.", { position: "top-center" });
       }
     } catch (error) {
       console.error("Network error:", error);
