@@ -1,0 +1,156 @@
+.container {
+  padding: 20px;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+  color: #346199;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.nameCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  color: #666;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #007bff;
+}
+
+.addButton {
+  background-color: #0d3b66;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #0b2e4a;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0.1vh);
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTeamCont {
+  position: absolute;
+  top: 25vh;
+  right: 35vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  border-radius: 2vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  padding: 3vh;
+  width: 50%;
+  z-index: 1000;
+}
+.addTeamCont input,
+select {
+  border: 0.2vh solid #d1d6da;
+  border-radius: 1vh;
+  padding: 1vh;
+}
+.addTeamBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addTeamCancleBtn {
+  background-color: #f6f8fa;
+  color: #afafaf;
+  width: 15vh;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+}
+.addTeamSaveBtn {
+  background-color: #184e7f;
+  color: white;
+  width: 15vh;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+}
+.deleteBtnCont {
+  position: absolute;
+  right: 18vh;
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+  padding: 2vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 50vh;
+  background-color: white;
+}
+
+.deleteBtns {
+  align-self: flex-end;
+}
+
+.CancleBtn {
+  background-color: #f6f8fa;
+  color: #afafaf;
+  width: 13vh;
+  height: 5vh;
+  border-radius: 2vh;
+  border: none;
+}
+.confirmBtn {
+  background-color: #184e7f;
+  color: white;
+  width: 13vh;
+  height: 5vh;
+  border-radius: 2vh;
+  border: none;
+}

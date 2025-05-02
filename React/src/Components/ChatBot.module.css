@@ -1,0 +1,268 @@
+.ChatBotMain {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.ChatBotPart1 {
+  flex: 20;
+}
+.ChatBotPart2 {
+  height: 100vh;
+  flex: 40;
+}
+.ChatBotChat {
+  margin-top: 6vh;
+  height: 50vh;
+  width: 80%;
+}
+.ChatBotHeading {
+  background-color: #33475b;
+  display: flex;
+  height: 8vh;
+  align-items: center;
+  gap: 2vh;
+  border-top-right-radius: 2vh;
+  border-top-left-radius: 2vh;
+}
+.ChatBotChatArea {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+}
+.ChatTextImg {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+.ChatText {
+  background-color: white;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  border-radius: 2vh;
+  width: 40%;
+  height: 40%;
+}
+
+.ChatTextImg img {
+  width: 5vh;
+  height: 5vh;
+}
+.ChatBotDetails {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 1vh;
+  padding: 2vh;
+  border-radius: 2vh;
+  margin-right: 1vh;
+}
+.ChatBotDetails > p {
+  margin: 0;
+}
+.ChatBotDetails hr {
+  margin: 0;
+}
+.ChatHeading {
+  font-size: 0.7rem;
+  color: #505050;
+}
+.ChatBotBtn {
+  background-color: #184e7f;
+  width: 30vh;
+  height: 5vh;
+  color: white;
+  border-radius: 2vh;
+  border: none;
+}
+
+.ChatBotPart3 {
+  flex: 40;
+}
+
+.sentMessage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1vh;
+  color: #8498b6;
+}
+.sentMessage img {
+  width: 7vh;
+  height: 7vh;
+}
+.chatMessage {
+  width: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatMessageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customColor {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vh;
+  gap: 1vh;
+  width: 50vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 2vh;
+  padding: 1vh;
+  margin-top: 2vh;
+}
+.customColorIcon {
+  display: flex;
+  gap: 1vh;
+}
+.customWhite {
+  width: 4vh;
+  height: 4vh;
+  border: 0.3vh solid lightgray;
+  border-radius: 50%;
+}
+.customBlack {
+  background-color: black;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+}
+.customBlue {
+  background-color: #33475b;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+}
+.editMessage {
+  display: flex;
+  flex-direction: column;
+  width: 30vh;
+
+  gap: 1vh;
+}
+.inputMessage {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f7f5;
+  padding: 1vh;
+}
+.inputMessage input {
+  border: none;
+}
+.ChatBotDetailEdit {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 1vh;
+  padding: 2vh;
+  border-radius: 2vh;
+  margin-right: 1vh;
+}
+.ChatBotDetailEdit > p {
+  margin: 0;
+}
+.ChatBotDetailEdit hr {
+  margin: 0;
+}
+.editText {
+  display: flex;
+  background-color: #f6f7f5;
+  align-items: center;
+}
+.editText img {
+  width: 3vh;
+  height: 3vh;
+}
+
+.rollerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  padding: 1.2vh;
+}
+
+.rollerColumn {
+  display: flex;
+  flex-direction: column;
+  height: 18vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rollerColumn::-webkit-scrollbar {
+  display: none;
+}
+
+.rollerItem {
+  scroll-snap-align: center;
+  padding: 1vh 0;
+  height: 6vh;
+  text-align: center;
+  font-size: 2.5vh;
+  line-height: 6vh;
+  user-select: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.active {
+  color: #000;
+  font-weight: bold;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5vh;
+}
+
+.colon {
+  font-size: 3vh;
+  padding: 0 1vh;
+  line-height: 18vh;
+}
+
+.saveBtn {
+  align-self: flex-end;
+  background-color: #184e7f;
+  width: 20vh;
+  height: 5vh;
+  color: white;
+  border-radius: 2vh;
+  border: none;
+}
+.ChatBotDetailEdit > input {
+  border: none;
+}
+.ChatBotBtnEdit {
+  background-color: #184e7f;
+  width: 30vh;
+  height: 5vh;
+  color: white;
+  border-radius: 2vh;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ChatBotBtnEdit input{
+  background-color: transparent;
+  width: 12vh;
+  color: white;
+  border: none;
+}
+.editText input{
+  width: 40vh;
+  height: 8vh;
+  border: none;
+}
+.customColorIcon input{
+  border: none;
+}

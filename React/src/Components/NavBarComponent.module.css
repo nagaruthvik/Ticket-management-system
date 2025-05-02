@@ -1,0 +1,100 @@
+.homePage {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.navBarComp {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(239, 237, 237);
+  overflow: hidden;
+
+}
+
+.mainBarComp {
+  flex: 9.2;
+
+  overflow-y: scroll;
+}
+
+.navBarItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+
+}
+.profileBanner {
+  display: flex;
+  border: none;
+  border-radius: 4vh;
+  justify-content: center;
+  
+}
+.profileBanner img {
+  width: 5vh;
+  height: 5vh;
+  
+}
+
+.evntAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: none;
+
+  width: 110%;
+}
+.compAlign img {
+  width: 6vh;
+  height: 6vh;
+}
+.logout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22vh;
+  bottom: 10vh;
+  background-color: #f3f3f1;
+  border-radius: 4vh;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.logout img {
+  width: 3vh;
+  height: 3vh;
+}
+@media screen and (max-width: 767px) {
+  .homePage {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .navBarComp {
+    flex: 1;
+
+    display: flex;
+  }
+  #mobileComp {
+    display: none;
+  }
+  .evntAlign {
+    display: flex;
+    flex-direction: column;
+  }
+  .navBarItems {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+  }
+  .navBarComp {
+    background-color: #d9d9d9;
+    margin: 0;
+  }
+  button {
+    background-color: #d9d9d9 !important;
+  }
+}

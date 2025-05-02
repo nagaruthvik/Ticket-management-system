@@ -1,0 +1,8 @@
+const settingsSchema = new mongoose.Schema({
+  adminId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  welcomeMessage: { type: String, default: "Hello! How can we help you?" },
+  chatColor: { type: String, default: "#0088cc" },
+  missedChatTimeLimit: { type: Number, default: 5 } // in minutes
+});
+
+module.exports = mongoose.model('Settings', settingsSchema);

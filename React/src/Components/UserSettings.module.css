@@ -1,0 +1,110 @@
+.settingMain{
+    display: flex;
+    margin: 2vh;
+    flex-direction: column;
+}
+.settingForm{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+    border-radius: 2vh;
+    flex-direction: column;
+    padding-left: 4vh;
+}
+.settingFormValues{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    
+}
+
+.settingFormValues div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    width: 70%;
+    
+    
+}
+.settingFormValues input{
+    width: 100%;
+    height: 4vh;
+    border-radius: 1vh;
+    border: 1px solid #3E3E3E;
+}
+.saveBtn{
+    display: flex;
+    width: 95%;
+    align-items: flex-end;
+    
+}
+.saveBtn button{
+    width: 15vh;
+    height: 6vh;
+    border: none;
+    color: white;
+    background-color: #1877F2;
+    border-radius: 1.5vh;
+}
+.divAlign {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 3vh;
+    width: 100%;
+  }
+  
+
+.divAlign img{
+    width: 3vh;
+    height: 3vh;
+}
+.loadingCont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .simpleLoader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-top: 5px solid transparent; 
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+.warning{
+    background-color: #F3F3F3;
+    color: #7C7C7C;
+    border-radius: 1vh;
+}
+@media screen and (max-width: 767px) {
+    .saveBtn{
+        display: flex;
+        width: 100%;
+        align-items:start ;
+        
+    }
+    .saveBtn button{
+        width: 15vh;
+        height: 6vh;
+        border: none;
+        color: white;
+        background-color: #1877F2 !important;
+        border-radius: 1.5vh;
+    }
+}

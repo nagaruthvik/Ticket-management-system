@@ -1,0 +1,253 @@
+.ChatSection {
+  display: flex;
+  height: 100vh;
+}
+
+.Chat1 {
+  flex: 20;
+  border: 0.2vh solid #d1d6da;
+}
+.Chath3 {
+  margin-left: 2vh;
+  color: #6a6b70;
+}
+.Chatp {
+  color: #888888;
+}
+.Chathr {
+}
+.Chat2 {
+  flex: 45;
+  border: 0.2vh solid #d1d6da;
+}
+.ChatMain {
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}
+.ChatPart1 {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.Chat3 {
+  flex: 35;
+  border: 0.2vh solid #d1d6da;
+  display: flex;
+  flex-direction: column;
+}
+.ChatSec1 {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  display: flex;
+
+  align-items: center;
+}
+.ChatSec2 {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.ChatProfile {
+  width: 4vh;
+  height: 4vh;
+}
+.BlueP {
+  color: #184e7f;
+}
+.ChatSec2Items {
+  border-radius: 2vh;
+  border: 2px solid lightgray;
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+  padding-left: 1vh;
+  height: 6vh;
+  color: #7F7F7F;
+}
+
+.ChatSec2Items > img {
+  width: 3vh;
+  height: 3vh;
+}
+.ticketStatus {
+  border: none;
+  width: 60vh;
+}
+
+.dropdown {
+  width: 1.5vh !important;
+  height: 1.5vh !important;
+}
+.ChatSec3 {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2vh;
+  border: 2px solid lightgray;
+  align-items: center;
+  padding-right: 1vh;
+}
+
+.ChatSecItem {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  padding-left: 1vh;
+  height: 5vh;
+  color: #7F7F7F;
+}
+
+.ChatSecItem > img {
+  width: 3vh;
+  height: 3vh;
+}
+.inputBox {
+  margin-left: 5vh;
+  margin-bottom: 3vh;
+}
+.inputBox input {
+  width: 90%;
+  height: 15vh;
+  border: 0.2vh solid #d1d6da;
+}
+.sendImg {
+  position: relative;
+  left: 90%;
+  top: 6vh;
+  height: 3vh;
+  width: 3vh;
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  padding: 0.5vh;
+}
+.chatArea {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+
+.user {
+  align-self: flex-end;
+}
+.admin {
+  align-self: flex-start;
+  
+}
+.chatChip {
+  display: flex;
+  align-items: center;
+}
+.chatChip1 {
+  display: flex;
+  flex-direction: column;
+}
+.chatChipFlex {
+  display: flex;
+}
+.chatChip1 p {
+  margin-bottom: 0;
+  color: #5e9bd5;
+}
+.chatChipFlex p {
+  margin-top: 0.2vh;
+  color: #9a9b9d;
+}
+.chatStatus {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border: 0.2vh solid #d1d6da;
+  border-radius: 2vh;
+
+  gap: 3.8vh;
+}
+.chatStatusBtn {
+  align-self: flex-end;
+  margin-bottom: 2vh;
+  margin-right: 2vh;
+}
+.chatStatusBtnCancle {
+  background-color: white;
+  color: #afafaf;
+  border: none;
+  border-radius: 2vh;
+  padding: 1vh;
+}
+.chatStatusBtnConfirm {
+  background-color: #184e7f;
+  color: white;
+  border: none;
+  border-radius: 2vh;
+  padding: 1vh;
+}
+.closeChat{
+  display: flex;
+  width: 100%;
+  color: #8C8E92;
+  justify-content: center;
+}
+.displayTeam{
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  border: 0.2vh solid lightgray;
+  border-radius: 2vh;
+}
+.displayTeam img{
+  width: 4vh;
+  height: 4vh;
+
+}
+.missedChatWarning{
+  position: fixed;
+  bottom: 23vh;
+  left: 44%;
+  color: red;
+}
+.chipTime{
+  align-self: center;
+  color: lightgray;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+}
+
+.hr{
+  color: #8C8E92;
+  width: 40%;
+  height: 0.1vh;
+}
+
+@media screen and (max-width: 756px) {
+  .Chat3{
+    display: none;
+  }
+  .missedChatWarning{
+    bottom: 21vh;
+  }
+  .inputBox input {
+    width: 90%;
+    height: 8vh;
+    border: 0.2vh solid #d1d6da;
+  }
+  .sendImg {
+    position: relative;
+    left: 75%;
+    top: 6vh;
+    height: 2vh;
+    width: 2vh;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    padding: 0.5vh;
+  }
+}

@@ -1,0 +1,60 @@
+.dashboard{
+
+    margin-left: 2vh;
+    margin-right: 2vh;
+    gap: 6vh;
+}
+.dashboardSticky{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.dashboardP{
+    color: #6A6B70;
+    font-size: 1.4rem;
+}
+.dashboardInput{
+    width: 40vh;
+    height: 5vh;
+    background-color: #FBFBFB;
+    border-radius: 1vh;
+    border: 1px solid #B6B6B6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+   
+    
+}
+.dashboardInputBox:focus {
+    outline: none;
+    box-shadow: none;
+    border: none; 
+  }
+.dashboardInputBox{
+    border: none;
+}
+.dashboardNav{
+    
+    display: flex;
+    gap: 2vh;
+    
+}
+.dashboardNav > p{
+    height: 4vh;
+    color: #888888;
+    z-index: 999;
+}
+.dashboardHr{
+    background-color: #E7E7E7;
+    width: 100%;
+    position: absolute;
+    top: 33vh;
+}
+
+.dashboardMain{
+    
+    display:flex ;
+    flex-direction: column;
+    gap: 1vh;
+}

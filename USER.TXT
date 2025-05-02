@@ -1,0 +1,21 @@
+const userSchema = new mongoose.Schema({
+  email: String,
+  name: String,
+  password: String,
+  role: {
+    type: String,
+    enum: ['super_admin', 'admin', 'member']
+  },
+  invitedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  isInvited: {
+    type: Boolean,
+    default: false
+  },
+  isActivated: {
+    type: Boolean,
+    default: false
+  }
+});

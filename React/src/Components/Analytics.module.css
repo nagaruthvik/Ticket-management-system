@@ -1,0 +1,25 @@
+.AnalyticsBoard {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-left: 2vh;
+}
+.green {
+  color: #00d907;
+}
+.graph {
+  width: 70%;
+  height: 40vh;
+}
+.analytics {
+  width: 55%;
+}
+.analyticsPart1 {
+  display: flex;
+  gap: 2vh;
+  align-items: center;
+}
+.chatCircle{
+    width: 40vh;
+    height: 20vh;
+}

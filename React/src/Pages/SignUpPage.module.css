@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+  }
+  .mainForm {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .formSection {
+    flex: 7;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+  }
+  .logBanner {
+    padding-left: 2vh;
+    align-self: flex-start;
+    display: flex;
+    color: #184e7f;
+    align-items: center;
+  }
+  .logBanner img {
+    width: 4.5vh;
+    height: 4.5vh;
+  }
+  
+  .labelInput {
+    display: flex;
+    flex-direction: column;
+  }
+  .createAccount {
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+  }
+  .checkBox {
+    display: flex;
+    align-items: center;
+    width: 34%;
+  }
+  
+  .inputFields {
+    width: 50vh;
+    height: 4.5vh;
+    border: 1px solid #6666;
+    border-radius: 1vh;
+  }
+  .createAccountBtn {
+    width: 50vh;
+    height: 15vh !important;
+    border-radius: 3vh;
+    color: white;
+    background-color: #a7a2a2;
+    border: none;
+  }
+  
+  .imgSection {
+    flex: 3;
+  }
+  
+  .imgSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .h1Mobile {
+    display: none;
+  }
+  
+  .loadingCont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .lodingBar {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .captcha {
+    font-size: 0.6rem;
+  }
+  @media screen and (max-width: 767px) {
+    .h1Mobile {
+      display: contents;
+      font-size: 2rem;
+    }
+    .imgSection {
+      display: none;
+    }
+  
+    .createAccountBtn {
+      width: 35vh;
+      height: 6vh;
+      border-radius: 3vh;
+      color: white;
+      background-color: #a7a2a2;
+      border: none;
+    }
+    .inputFields {
+      width: 35vh;
+      height: 4.5vh;
+      border: 1px solid #6666;
+      border-radius: 1vh;
+    }
+    .checkBox {
+      width: 80%;
+    }
+    .captcha {
+      font-size: 0.6rem;
+    }
+  }
+  

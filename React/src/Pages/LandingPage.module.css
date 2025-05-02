@@ -1,0 +1,379 @@
+body {
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+}
+.LandingMain {
+  background-color: rgba(24, 78, 127, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.navCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+.logo {
+  display: flex;
+  align-items: center;
+
+  gap: 3vh;
+}
+.logo h1 {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1;
+  color: #184e7f;
+}
+
+.logo img {
+  height: 7vh;
+  width: 7vh;
+}
+
+#loginBtn {
+  background-color: transparent;
+  border: none;
+}
+#signUpBtn {
+  background-color: #184e7f;
+  border: none;
+  border-radius: 1vh;
+  color: white;
+  width: 12vh;
+  height: 6vh;
+}
+.mainLanding {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LandingMainCont {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.LandingMainCont h1 {
+  font-size: 2rem;
+  color: #30404d;
+}
+.section2 {
+  display: flex;
+  gap: 3vh;
+}
+.btnStyle {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  background-color: transparent;
+}
+.playBtn {
+  border: 0.3vh solid #244779;
+  border-radius: 50%;
+  padding: 1vh;
+  color: #244779;
+}
+.lpbtn1 {
+  background-color: #244779;
+  color: white;
+  border: none;
+  border-radius: 1vh;
+  width: 17vh;
+}
+.lpBtn2 {
+  background-color: transparent;
+  border: none;
+  color: #244779;
+}
+
+.img1 {
+  position: relative;
+}
+
+.img2 {
+  position: absolute;
+  bottom: 1vh;
+  left: 100vh;
+}
+.img3 {
+  position: absolute;
+  top: 65vh;
+  left: 170vh;
+}
+.img4 {
+  position: absolute;
+  top: 10vh;
+  left: 150vh;
+}
+
+.company {
+  position: relative;
+  width: 100%;
+  margin-top: 16vh;
+  display: flex;
+  justify-content: space-around;
+  gap: 3vh;
+  background-color: rgba(24, 78, 127, 0.2);
+  padding: 1vh;
+}
+
+.subMain1 {
+  position: relative;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.subMain2 {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  gap: 25vh;
+}
+.blueHeading {
+  color: #30404d;
+}
+.rectangles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rectangle1 {
+  position: relative;
+  width: 40vh;
+  height: 12vh;
+  background-color: #629dd4;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+}
+.rectangle2 {
+  width: 35vh;
+  height: 12vh;
+  background-color: #256cb5;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+}
+.rectangle3 {
+  width: 30vh;
+  height: 12vh;
+  background-color: #184e7f;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+}
+
+.arrow1 {
+  position: absolute;
+  top: 160vh;
+  left: 130vh;
+}
+.arrow2 {
+  position: absolute;
+  top: 170vh;
+  left: 130vh;
+}
+.arrow3 {
+  position: absolute;
+  top: 180vh;
+  left: 130vh;
+}
+.social {
+  position: absolute;
+  top: 130vh;
+}
+
+.subMain3 {
+  display: flex;
+  gap: 2vh;
+}
+.chip1,
+.chip2 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+  border-radius: 1vh;
+  background-color: white;
+
+  padding: 1vh;
+  width: 60vh;
+}
+
+.displayInline {
+  display: flex;
+  align-items: baseline;
+}
+.subMain3Items {
+  display: flex;
+  flex-direction: column;
+}
+.chipBtn {
+  border: 1px solid #244779;
+  border-radius: 1vh;
+  width: 30vh;
+  background-color: white;
+  height: 6vh;
+  color: #184e7f;
+  align-self: center;
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.chatOption {
+  position: fixed;
+  padding: 3vh;
+  background-color: #33475b;
+  border: none;
+  border-radius: 50%;
+  bottom: 2vh;
+  right: 2vh;
+}
+.chatBox {
+  position: fixed;
+  width: 50vh;
+  height: 30vh;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  bottom: 53vh;
+  right: 2vh;
+}
+.chatBoxHead {
+  display: flex;
+  align-items: center;
+  padding: 2vh;
+  gap: 2vh;
+}
+.chatBoxHead p {
+  color: white;
+}
+.chatBoxHead img {
+  width: 5vh;
+  height: 5vh;
+}
+
+.chatBackground {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  overflow-y: scroll;
+  min-height: 50vh;
+  position: relative;
+  gap: 2vh;
+}
+.message1 {
+  background-color: white;
+  padding: 1vh;
+  align-self: flex-end;
+}
+.message2 {
+  display: flex;
+}
+.message2 img {
+  width: 4vh;
+  height: 4vh;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2vh;
+}
+.chatBotButton {
+  background-color: #184e7f;
+  color: white;
+  width: 30vh;
+  height: 5vh;
+  border: none;
+  border-radius: 2vh;
+}
+.enterMessage {
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.enterMessage input {
+  border: none;
+}
+.chatArea {
+  display: flex;
+  flex-direction: column;
+}
+.chatChip {
+  display: flex;
+  align-items: center;
+}
+.chatChip1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.chatChipFlex {
+  display: flex;
+}
+.chatChip1 p {
+  margin-bottom: 0;
+}
+.chatChipFlex p {
+  margin-top: 0.2vh;
+
+  background-color: white;
+  padding: 3vh;
+  margin-left: 2vh;
+}
+.user {
+  align-self: flex-end;
+  margin-right: 2vh;
+}
+.admin {
+  align-self: flex-start;
+  margin-left: 2vh;
+}
+
+.botMessage {
+  width: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  bottom: 4vh;
+  right: 9vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5vh;
+  padding: 1vh;
+}
+.closeBtn {
+  align-self: flex-end;
+}
+.disabledInput {
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+  color: #999;
+}
+
+@media screen and (max-width: 1000px) {
+  .LandingMain {
+    display: none;
+  }
+}
