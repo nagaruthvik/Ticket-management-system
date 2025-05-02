@@ -60,27 +60,25 @@ export default function UserSettings() {
   useEffect(() => {
     GetUserDet();
   }, []);
-  
+
   const handleSubmit = async (e) => {
-    
     e.preventDefault();
-  
+
     if (formData.password !== formData.cPassword) {
       toast.error("Passwords do not match", { position: "top-center" });
       return;
     }
+
     let data = {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
     };
-  
+
     if (formData.password !== "") {
       data.password = formData.password;
     }
-  
 
-  
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
@@ -93,13 +91,13 @@ export default function UserSettings() {
         credentials: "include",
         body: JSON.stringify(data),
       });
-  
+
       const result = await response.json();
-  
+
       if (!response.ok) {
         throw new Error(result.message || "Failed to update user");
       }
-  
+
       toast.success(result.message, { position: "top-center" });
       navigate("/");
     } catch (error) {
@@ -108,7 +106,7 @@ export default function UserSettings() {
       setLoading(false);
     }
   };
-  
+
   return (
     <>
       {isLoading && (
@@ -124,41 +122,100 @@ export default function UserSettings() {
           <p>Edit</p>
           <hr />
           <form className={styles.settingFormValues} onSubmit={handleSubmit}>
-            {["firstName", "lastName", "email", "password", "cPassword"].map(
-              (field, idx) => (
-                <div key={idx} className={styles.settingFormFeild}>
-                  <label>
-                    {field === "cPassword"
-                      ? "Confirm Password"
-                      : field.charAt(0).toUpperCase() + field.slice(1)}
-                  </label>
-                  <div className={styles.divAlign}>
-                    <input
-                      className={styles.settingFormInput}
-                      type={field.includes("password") ? "password" : "text"}
-                      name={field}
-                      value={formData[field]}
-                      onChange={handleChange}
-                    />
-                    <img
-                      onClick={() =>
-                        setWarnings((prev) => ({
-                          ...prev,
-                          [field]: !prev[field],
-                        }))
-                      }
-                      src="./warning.png"
-                      alt="!"
-                    />
-                    {warnings[field] && (
-                      <div className={styles.warning}>
-                        <p>User will be logged out immediately</p>
-                      </div>
-                    )}
+            <div className={styles.settingFormFeild}>
+              <label>First Name</label>
+              <div className={styles.divAlign}>
+                <input
+                  className={styles.settingFormInput}
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className={styles.settingFormFeild}>
+              <label>Last Name</label>
+              <div className={styles.divAlign}>
+                <input
+                  className={styles.settingFormInput}
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className={styles.settingFormFeild}>
+              <label>Email</label>
+              <div className={styles.divAlign}>
+                <input
+                  className={styles.settingFormInput}
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className={styles.settingFormFeild}>
+              <label>Password</label>
+              <div className={styles.divAlign}>
+                <input
+                  className={styles.settingFormInput}
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                <img
+                  onClick={() =>
+                    setWarnings((prev) => ({
+                      ...prev,
+                      password: !prev.password,
+                    }))
+                  }
+                  src="./warning.png"
+                  alt="!"
+                />
+                {warnings.password && (
+                  <div className={styles.warning}>
+                    <p>User will be logged out immediately</p>
                   </div>
-                </div>
-              )
-            )}
+                )}
+              </div>
+            </div>
+
+            <div className={styles.settingFormFeild}>
+              <label>Confirm Password</label>
+              <div className={styles.divAlign}>
+                <input
+                  className={styles.settingFormInput}
+                  type="password"
+                  name="cPassword"
+                  value={formData.cPassword}
+                  onChange={handleChange}
+                />
+                <img
+                  onClick={() =>
+                    setWarnings((prev) => ({
+                      ...prev,
+                      cPassword: !prev.cPassword,
+                    }))
+                  }
+                  src="./warning.png"
+                  alt="!"
+                />
+                {warnings.cPassword && (
+                  <div className={styles.warning}>
+                    <p>User will be logged out immediately</p>
+                  </div>
+                )}
+              </div>
+            </div>
 
             <div className={styles.saveBtn}>
               <button type="submit">Save</button>
