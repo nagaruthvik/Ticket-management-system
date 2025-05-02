@@ -196,8 +196,14 @@ Once the user submits their details, they will be able to **communicate with a t
 - **Node.js with Express**: For the backend server and API handling.
 - **MongoDB**: For database storage.
 
-## Hosting
-- **Frontend**: Deployed using **Vercel** or **Netlify**.
-- **Backend**: Deployed using **Render** or **Heroku**.
+
+
+## 🚀 Hosting  
+
+- **Frontend** deployed on **Vercel**:  
+  🔗 [https://ticket-management-system-amber.vercel.app/](https://ticket-management-system-amber.vercel.app/)
+
+- **Backend** deployed on **Render**:  
+  🔗 [https://ticket-management-system-qdvl.onrender.com](https://ticket-management-system-qdvl.onrender.com)
 
 
