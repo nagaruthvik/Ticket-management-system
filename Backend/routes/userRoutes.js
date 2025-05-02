@@ -149,19 +149,24 @@ userRouter.put("/editUser/:id", errorLogger, async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
-userRouter.put("/editUser",auth, errorLogger, async (req, res) => {
-  try {
-    
-      const id = req.user.userId;
-      const data = req.body;
-    
-    const isValid = await User.findById(id);
 
-    if (!isValid) {
+userRouter.put("/editUser", auth, errorLogger, async (req, res) => {
+  try {
+    const id = req.user.userId;
+    let data = req.body;
+
+    const userExists = await User.findById(id);
+    if (!userExists) {
       return res.status(404).json({ message: "No user found" });
     }
 
-    const result = await User.findByIdAndUpdate(id, data, { new: true }); 
+    if (data.password) {
+      const saltRounds = parseInt(process.env.BCRYPT_SALT) || 10;
+      const hashedPassword = await bcrypt.hash(data.password, saltRounds);
+      data.password = hashedPassword;
+    }
+
+    const result = await User.findByIdAndUpdate(id, data, { new: true });
     if (!result) {
       return res
         .status(500)
@@ -174,6 +179,7 @@ userRouter.put("/editUser",auth, errorLogger, async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
 userRouter.put(
   "/updateChatsSolved/:direction",
   auth,
