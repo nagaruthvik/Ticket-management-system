@@ -4,11 +4,7 @@
 Features include ticket dashboards, team management, real-time chat, analytics, and support for multiple admins with their own teams.
 
 Built with: **React.js**, **Node.js**, **Express.js**, and **MongoDB**
-# 🎮 Demo Credentials  
-Use the following credentials to explore the platform:  
 
-- **Email**: `jack@gmail.com`  
-- **Password**: `Jack@000`  
 
 Feel free to log in and test the features! 🚀  
 
